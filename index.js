@@ -4,6 +4,12 @@ const app=express();
 //by default websites run on port->80
 //at producction level or when we deploy it on live server it is port -> 80
 const port=8000;
+//use express router
+//middleware
+//before the server starts up it needs to access this route
+app.use('/',require('./routes/index'))
+
+app.use
 app.listen(port,(err)=>{
     if(err){
         //Interpolation::(template strings)(backtiks)
