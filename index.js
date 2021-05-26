@@ -7,9 +7,10 @@ const port=8000;
 //use express router
 //middleware
 //before the server starts up it needs to access this route
-app.use('/',require('./routes/index'))
+//for any further url's defined in this file, we are routing the home part to it(/).
 
-app.use
+app.use('/',require('./routes/index'));
+
 app.listen(port,(err)=>{
     if(err){
         //Interpolation::(template strings)(backtiks)

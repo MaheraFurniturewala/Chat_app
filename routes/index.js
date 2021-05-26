@@ -13,7 +13,16 @@ console.log('router loaded');
 //first dot is to move out of route folder first and ./ for moving to a parallel folder of controllers
 const homeController = require('../controllers/home_controller')
 
+// any url with './' first comes here
 router.get('/',homeController.home);
+// now if it is './users/' it will go to the users route by uing this middleware
+//by default all routes are already at '/',
+router.use('/users',require('./users'));
+
+//for any further routes, access from here
+//router.use('/routerName',require('./ruoterFile'))
+
+
 
 
 
